@@ -1,0 +1,460 @@
+body {
+    margin: 0;
+    background: #0c0c0c;
+    font-family: Arial, sans-serif;
+    color: #ffffff;
+    min-height: 30vh;
+}
+.navbar {
+    padding: 0 2rem 1rem 2rem;
+    box-shadow: 10px .1px .1px rgba(255, 255, 255, .7);
+}
+.navbar-content h1 {
+    font-size: 1.3rem;
+}
+.navbar-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 1rem;
+}
+.navbar-content img {
+    width: 15rem;
+}
+.nav-left {
+    display: flex;
+    gap: 2rem;
+}
+.nav-left img {
+    width: 1.4rem;
+}
+
+.content-wrapper {
+    padding: 5rem 3rem;
+    text-align: center;
+}
+.content-wrapper h1 {
+    font-size: 3em;
+    text-align: center;
+}
+.content-wrapper-grad {
+    background: linear-gradient(to right, #00ade7, #994ce1);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+.container {
+    width: auto;
+    padding-bottom: 3.5rem;
+}
+
+.gallery {
+    text-align: center;
+}
+
+.gallery-title {
+    margin-bottom: 2rem;
+}
+
+.gallery-title h1 {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.highlight-green {
+    color: #22c55e;
+}
+
+.slider-container {
+    position: relative;
+    height: 500px; /* Increased height */
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.slider-wrapper {
+    position: relative;
+    height: 500px;
+    touch-action: pan-y pinch-zoom;
+}
+
+.slider-track {
+    position: relative;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to bottom, rgba(0, 0, 255, 0), rgba(0, 0, 0, 0.03) 40%, rgba(0, 0, 0, 0.03) 80%, rgba(0, 0, 255, 0));
+}
+
+.slide {
+    position: absolute;
+    width: auto;    /* Changed to rem */
+    height: 500px;   /* Changed to rem */
+    transition: all 0.5s ease;
+    opacity: 0;
+    transform: scale(0.8) translateX(100%);
+}
+
+.slide.active {
+    opacity: 1;
+    transform: scale(1) translateX(0);
+    z-index: 30;
+    width: auto;    /* Larger size for active slide */
+    height: 500px;   /* Larger size for active slide */
+}
+
+.slide.prev {
+    opacity: 0.6;
+    transform: scale(0.85) translateX(-108%);
+    z-index: 20;
+}
+
+.slide.next {
+    opacity: 0.6;
+    transform: scale(0.85) translateX(108%);
+    z-index: 20;
+}
+
+.slide img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 0.75rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.nav-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 40;
+    background: rgba(255, 255, 255, 0.8);
+    border: none;
+    border-radius: 50%;
+    width: 3rem;     /* Changed to rem */
+    height: 3rem;    /* Changed to rem */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.nav-button:hover {
+    background-color: white;
+}
+
+.nav-button.prev {
+    left: 1rem;
+}
+
+.nav-button.next {
+    right: 1rem;
+}
+
+.slider-dots {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 1.5rem;
+}
+
+.dot {
+    width: 0.5rem;   /* Changed to rem */
+    height: 0.5rem;  /* Changed to rem */
+    border-radius: 50%;
+    background-color: #d1d5db;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.dot.active {
+    width: 1rem;     /* Changed to rem */
+    background-color: #878787;
+    border-radius: 0.25rem;
+}
+  .faq-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+  }
+  .faq-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    background: linear-gradient(to right, #8a2be2, #00bfff);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+.line {
+    flex: 1;
+    height: 1px;
+    background-color: #444;
+    margin: 0 2rem;
+}
+.foo-line {
+    flex: 1;
+    height: 1px;
+    background-color: #444;
+    margin: 0 1rem;
+}
+.desc-info {  
+    text-align: center;
+    border-radius: 18px;
+    padding: 6rem 0;
+}
+.desc-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.desc-icon img {
+    width: 20rem;
+}
+.desc-items {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1rem 3rem;
+}
+.desc-item {
+    display: flex;
+    padding: 15px;
+    gap: 1rem;
+    border-radius: 18px;
+}
+.desc-item img {
+    width: 7rem;
+}
+.desc-text {
+    display: grid;
+    padding: 9px 0;
+    gap: 1rem;
+}
+.desc-text h1, p {
+    text-align: left;
+    margin: 0;
+    font-size: 20px;
+}
+.ajakan {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 3.5rem 0 6rem 0;
+}
+.telegram-wrapper {
+   padding: 0 11rem;
+}
+.telegram-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    font-size: 24px;
+    font-weight: 600;
+    background-color: #435cf9;
+    padding: 10px 0;
+    border-radius: 15px;
+    text-decoration: none;
+    color: #ffffff;
+}
+.telegram-icon img {
+    width: 2.7rem;
+}
+  
+.quote-container {
+    display: flex;
+    align-items: center;
+    background: linear-gradient(to bottom, #1d1d1d, #121212);
+    margin: 6rem 0;
+    padding-right: 4rem;
+    gap: 2rem;
+}
+.quote-content img {
+    width: 23rem;
+}
+  .quote-text {
+    text-align: justify;
+}
+.quote-text p {
+    color: #9e9e9e;
+}
+.quote-text h1 {
+    font-size: 30px;
+}
+.footer-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem;
+}
+.footer-content img {
+    width: 12rem;
+}
+.footer-text {
+    display: flex;
+    gap: 1rem;
+}
+.footer-text a {
+    text-decoration: none;
+    color: #ffffff;
+}
+  @media (max-width: 768px) {
+    .slide {
+        width: 16rem;    /* Smaller size for mobile */
+        height: 24rem;   /* Smaller size for mobile */
+    }
+
+    .slide.active {
+        width: 18rem;    /* Smaller active size for mobile */
+        height: 27rem;   /* Smaller active size for mobile */
+    }
+
+    .slider-container {
+        height: 500px;   /* Adjusted container height for mobile */
+    }
+
+    .nav-button {
+        width: 2.2rem;   /* Smaller buttons for mobile */
+        height: 2.2rem;  /* Smaller buttons for mobile */
+    }
+  }
+
+  @media (max-width: 476px) {
+    .navbar {
+        padding: 0 1rem .5rem 1rem;
+    }
+    .navbar-content img {
+        width: 9rem;
+    }
+    .nav-left img {
+        width: 1.2rem;
+    }
+    .content-wrapper {
+        padding: 2rem 1rem;
+    }
+    .content-wrapper h1 {
+        font-size: 1.3em;
+    }
+    .container {
+        padding-bottom: 2.5rem;
+    }
+    .slider-track {
+        width: 100%;
+        height: 150px;
+    }
+    .slide {
+        width: auto;    /* Even smaller for very small devices */
+        height: 150px;
+    }
+    .slide.active {
+        width: 100%;    /* Even smaller active size */
+        height: 150px;
+    }
+    .slide img {
+        object-fit: fill;
+        width: 350px;
+        height: 200px;
+    }
+    .slider-container {
+        height: 200px;
+    }
+    .dot {
+        width: 0.4rem;
+        height: 0.4rem;
+    }
+    .dot.active {
+        width: .9rem;
+    }
+    .faq-title {
+        font-size: 1.2em;
+        text-align: center;
+        gap: 0;
+    }
+    .line {
+        display: none;
+    }
+    .desc-info-item h1 {
+        font-size: 1.3em;
+    }
+    .desc-icon img {
+        width: 13rem;
+    }
+    .desc-items {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        gap: .5rem;
+        padding: 0 1rem;
+    }
+    .desc-text h1 {
+        font-size: 1.3em;
+    }
+    .desc-text p {
+        font-size: 13px;
+    }
+    .desc-text {
+        padding: 0;
+    }
+    .nav-button.prev {
+        left: .5rem;
+    }
+    .nav-button.next {
+        right: .5rem;
+    }
+    svg {
+        width: 30px;
+        height: 30px;
+    }
+    .ajakan {
+        font-size: 1.5rem;
+        padding: 2.7rem 1rem 4.5rem 1rem;
+        gap: .5rem;
+    }
+    .ajakan h1 {
+        text-align: center;
+        font-size: 1.5rem;
+        padding: 0 1rem;
+    }
+    .telegram-wrapper {
+        padding: 0 1rem;
+    }
+    .telegram-icon {
+        padding: 10px;
+    }
+    .quote-container {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        margin: 6rem 0;
+        padding-right: 0;
+        gap: 1rem;
+    }
+    .quote-text p {
+        font-size: 14px;
+    }
+    .quote-text h1 {
+        font-size: 1.1em;
+    }
+    .quote-text {
+        text-align: left;
+        padding: 0 1rem 1.5rem 1.5rem;
+    }
+    .quote-content img {
+        width: 15rem;
+    }
+    .footer-container {
+        box-shadow: 10px .1px .1px rgba(255, 255, 255, .7);
+        padding: 1.5rem 1rem;
+    }
+    .footer-content img {
+        width: 9rem;
+    }
+    .footer-text {
+        font-size: 12px;
+        gap: .5rem;
+    }
+  }
